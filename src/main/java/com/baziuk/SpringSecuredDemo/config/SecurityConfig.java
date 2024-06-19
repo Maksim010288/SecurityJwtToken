@@ -38,7 +38,7 @@ public class SecurityConfig {
                 .csrf().disable()
                 .cors().disable()
                 .authorizeRequests()
-                .requestMatchers("/users").hasAuthority("ADMIN")
+                .requestMatchers("/users").hasAuthority("ADMIN ")
                 .requestMatchers(HttpMethod.POST,"/create").hasAuthority("USER")
                 .requestMatchers("/hello/").hasAuthority("USER")
                 .requestMatchers("/admin/").hasAuthority("ADMIN")
